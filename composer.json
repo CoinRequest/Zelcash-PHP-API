@@ -1,0 +1,50 @@
+{
+    "name": "coinrequest/zelcash-php-api",
+    "description": "PHP API client for ZelCash Explorer",
+    "type": "library",
+    "keywords": [
+        "cryptocurrency",
+        "blockchain",
+        "zelcash"
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "composer/ca-bundle": "^1.1",
+        "php": ">=7.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.2",
+        "symfony/var-dumper": "^4.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CoinRequest",
+            "email": "development@coinrequest.io"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "ZelCash\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ZelCash\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit tests"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ZelCash\\Providers\\ZelCashServiceProvider"
+            ]
+        }
+    }
+}
